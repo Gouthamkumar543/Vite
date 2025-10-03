@@ -1,8 +1,11 @@
 import React from 'react'
 import { speakerData } from '../Data/Data'
+import { useNavigate } from 'react-router-dom'
 
 const Speakers = () => {
     const fiveProduct = speakerData.slice(0, 5)
+
+    const Navigate = useNavigate()
 
     return (
         <>
@@ -12,7 +15,7 @@ const Speakers = () => {
                     fiveProduct.map((item) => {
                         return (
                             <div className='card'>
-                                <img src={item.images} />
+                                <img src={item.images} onClick={() => Navigate("/speakerspage")} />
                                 <p><strong>Description:</strong>{item.description}</p>
                                 <div>
                                     <span><strong>Price:</strong> ₹{item.price}</span>

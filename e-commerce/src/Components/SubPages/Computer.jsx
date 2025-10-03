@@ -1,8 +1,11 @@
 import React from 'react'
 import { computerData } from '../Data/Data'
+import { useNavigate } from 'react-router-dom'
 
 const Computer = () => {
     const fiveProduct = computerData.slice(0, 5)
+
+    const Navigate = useNavigate()
 
     return (
         <>
@@ -12,7 +15,7 @@ const Computer = () => {
                     fiveProduct.map((item) => {
                         return (
                             <div className='card'>
-                                <img src={item.images} />
+                                <img src={item.images} onClick={() => Navigate("/computerpage")} />
                                 <p><strong>Description:</strong>{item.description}</p>
                                 <div>
                                     <span><strong>Price:</strong> ₹{item.price}</span>

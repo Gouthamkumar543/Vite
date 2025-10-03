@@ -1,32 +1,34 @@
 import React from 'react'
 import LandingPage from './Components/LandingPage/LandingPage'
 import "./App.css"
-import Men from './Components/SubPages/Men'
-import Women from './Components/SubPages/Women'
-import Furniture from './Components/SubPages/Furniture'
-import Books from './Components/SubPages/Books'
-import Kitchen from './Components/SubPages/Kitchen'
-import Speakers from './Components/SubPages/Speakers'
-import Watch from './Components/SubPages/Watch'
-import Computer from './Components/SubPages/Computer'
-import Ac from './Components/SubPages/Ac'
+import { Route, Routes } from 'react-router-dom'
+import MenPage from './Components/IndividualProduct/MenPage'
+import NavBar from './Components/SubPages/NavBar'
+import AcPage from './Components/IndividualProduct/AcPage'
+import BooksPage from './Components/IndividualProduct/BooksPage'
+import FurniturePage from './Components/IndividualProduct/FurniturePage'
+import Kitchenpage from './Components/IndividualProduct/Kitchenpage'
+import WatchPage from './Components/IndividualProduct/WatchPage'
+import Womenpage from './Components/IndividualProduct/Womenpage'
+import ComputerPage from './Components/IndividualProduct/ComputerPage'
+import SpeakerPage from './Components/IndividualProduct/SpeakerPage'
 
 const App = () => {
   return (
     <div>
-      <LandingPage />
-      <Men />
-      <Women />
-      <Furniture />
-      <Books />
-      <Kitchen />
-      <Furniture />
-      <Books />
-      <Kitchen />
-      <Speakers />
-      <Watch />
-      <Computer />
-      <Ac />
+      <NavBar />
+      <Routes>
+        <Route path='/' element={<LandingPage/>}/>
+        <Route path='/menpage' element={<MenPage />}/>
+        <Route path='/acpage' element = {<AcPage />}/>
+        <Route path='/bookspage' element = {<BooksPage />}/>
+        <Route path='/furniturepage' element = {<FurniturePage />}/>
+        <Route path='/kitchenpage' element = {<Kitchenpage />}/>
+        <Route path='/speakerpage' element = {<SpeakerPage />}/>
+        <Route path='/watchpage' element = {<WatchPage />}/>
+        <Route path='/womenpage' element = {<Womenpage />}/>
+        <Route path='/computerpage' element = {<ComputerPage />}/>
+      </Routes>
     </div>
   )
 }
