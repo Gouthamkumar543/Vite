@@ -1,14 +1,17 @@
 import React from 'react'
 import { booksData } from '../Data/Data'
+import { useNavigate } from 'react-router-dom'
 
 const BooksPage = () => {
+    const Navigate = useNavigate()
+
     return (
         <div className='idn-prod'> {
             booksData.map((item) => {
                 return (
                     <div className='ind-card'>
                         <h2>{item.title}</h2>
-                        <img src={item.images} alt='Mobile' />
+                        <img src={item.images} alt='Mobile' onClick={() => Navigate(`/bookitem/${item.id}`)} />
                         <p><strong>Description:</strong>{item.description}</p>
                         <div>
                             <span><strong>Price:</strong> ₹{item.price}</span>

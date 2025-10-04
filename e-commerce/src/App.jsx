@@ -12,6 +12,16 @@ import WatchPage from './Components/IndividualProduct/WatchPage'
 import Womenpage from './Components/IndividualProduct/Womenpage'
 import ComputerPage from './Components/IndividualProduct/ComputerPage'
 import SpeakerPage from './Components/IndividualProduct/SpeakerPage'
+import AcItem from './Components/SingleItem/AcItem'
+import BooksItem from './Components/SingleItem/BooksItem'
+import ComputerItem from './Components/SingleItem/ComputerItem'
+import FurnitureItem from './Components/SingleItem/FurnitureItem'
+import KitchenItem from './Components/SingleItem/KitchenItem'
+import MenItem from './Components/SingleItem/MenItem'
+import WomenItem from './Components/SingleItem/WomenItem'
+import SpeakerItem from './Components/SingleItem/SpeakerItem'
+import WatchItem from './Components/SingleItem/WatchItem'
+import Footer from './Components/Footer/Footer'
 
 const App = () => {
   return (
@@ -28,7 +38,17 @@ const App = () => {
         <Route path='/watchpage' element = {<WatchPage />}/>
         <Route path='/womenpage' element = {<Womenpage />}/>
         <Route path='/computerpage' element = {<ComputerPage />}/>
+        <Route path='/acitem/:id' element = {<AcItem />}/>
+        <Route path='/bookitem/:id' element={<BooksItem />}/>
+        <Route path='/computeritem/:id' element={<ComputerItem />}/>
+        <Route path='/furnitureitem/:id' element={<FurnitureItem />}/>
+        <Route path='/kitchenitem/:id' element={<KitchenItem />}/>
+        <Route path='/menitem/:id' element={<MenItem />}/>
+        <Route path='/womenitem/:id' element={<WomenItem />}/>
+        <Route path='/speakeritem/:id' element={<SpeakerItem />}/>
+        <Route path='/watchitem/:id' element={<WatchItem />}/>
       </Routes>
+      <Footer />
     </div>
   )
 }
