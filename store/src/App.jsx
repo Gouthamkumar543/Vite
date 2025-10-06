@@ -3,11 +3,11 @@ import axios from "axios"
 import Count from "../Components/Count/Count"
 import Increase from '../Components/Increase/Increase'
 import Decrease from '../Components/Decrease/Decrease'
-import Navbar1 from '../Components/Navbar/navbar'
 import { Route, Routes } from "react-router-dom"
 import Recipies from '../Components/Recipies/Recipies'
 import "./App.css"
 import Cart from '../Components/Cart/Cart'
+import Navbar1 from '../Components/Navbar/Navbar1'
 
 export const Context = createContext()
 // console.log(Context);
